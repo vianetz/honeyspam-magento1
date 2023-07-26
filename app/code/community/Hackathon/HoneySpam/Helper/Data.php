@@ -107,7 +107,7 @@ class Hackathon_HoneySpam_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function isHoneypotFilled()
     {
-        return strlen($this->_getRequest()->getParam($this->getHoneypotName()));
+        return strlen((string)$this->_getRequest()->getParam($this->getHoneypotName())) > 0;
     }
 
     /**
